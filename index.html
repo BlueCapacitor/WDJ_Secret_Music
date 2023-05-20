@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    background-color: #cfc;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  audio {
+    width: 100%;
+/*    height: auto;*/
+  }
+
+  .collapsible {
+    background-color: #787;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+
+  .active, .collapsible:hover {
+    background-color: #565;
+  }
+
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+</style>
+</head>
+<body>
+
+<h2>Preliminary Music Proposals</h2>
+
+<button type="button" class="collapsible">Crown Point</button>
+<div class="content">
+  <audio controls>
+    <source src="https://vvfdc.org/Music/Audio/Crown%20Point.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <img src="Crown Point.png">
+</div>
+
+<button type="button" class="collapsible">Arkansas traveler</button>
+<div class="content">
+  <audio controls>
+    <source src="https://vvfdc.org/Music/Audio/Arkansas%20Traveler.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <img src="Crown Point.png">
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
