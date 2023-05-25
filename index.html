@@ -5,6 +5,7 @@
 <style>
   body {
     background-color: #cfc;
+    transition: background-color 0.3s ease;
   }
 
   img {
@@ -14,8 +15,9 @@
 
   audio {
     width: 100%;
-/*    height: auto;*/
   }
+
+/*  Collapsible*/
 
   .collapsible {
     background-color: #787;
@@ -39,202 +41,300 @@
     overflow: hidden;
     background-color: #fff;
   }
+
+/*  Slider*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #565;
+  -webkit-transition: .3s;
+  transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+}
+
+.slider:before {
+  position: absolute;
+  content: "Fife";
+  top: 4px;
+  left: 4px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  height: 12px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  padding: 7px 0;
+  background-color: white;
+  -webkit-transition: .3s;
+  transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+}
+
+input:checked + .slider {
+  background-color: #556;
+}
+/*
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}*/
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  content: "Drum";
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
 </style>
 </head>
 <body>
 
-<h2>WDJ Secret Music Project - Preliminary Proposals</h2>
+  <label class="switch">
+    <input type="checkbox" name="instrument_toggle">
+    <span class="slider round"></span>
+  </label>
 
-<button type="button" class="collapsible">Crown Point</button>
-<div class="content">
-  <audio controls>
-    <source src="https://vvfdc.org/Music/Audio/Crown%20Point.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Crown Point.png">
+  <h2>WDJ Secret Music Project - Preliminary Proposals</h2>
+
+  <p class="drum">Note for drummers: I found multiple versions for a couple of the drum parts. I put them all in, since you would know which version you play / which version is the best much better than I would.</p>
+
+  <button type="button" class="collapsible">Crown Point</button>
+  <div class="content">
+    <audio controls>
+      <source src="https://vvfdc.org/Music/Audio/Crown%20Point.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Crown Point.png">
+    <img class="drum" src="drum_music_png/Crown Point.png">
+  </div>
+
+  <button type="button" class="collapsible">Arkansas Traveler</button>
+  <div class="content">
+    <audio controls>
+      <source src="https://vvfdc.org/Music/Audio/Arkansas%20Traveler.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Arkansas Traveler.png">
+    <img class="drum" src="drum_music_png/Arkansas Traveler.png">
+  </div>
+
+  <button type="button" class="collapsible">Black Watch</button>
+  <div class="content">
+    <p>This tune was in Culloden Moor, so many/most WDJ members may be familiar with it.</p>
+    <audio controls>
+      <source src="https://vvfdc.org/Music/Audio/Black%20Watch.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Black Watch.png">
+    <img class="drum" src="drum_music_png/Black Watch-1.png">
+    <img class="drum" src="drum_music_png/Black Watch-2.png">
+  </div>
+
+  <button type="button" class="collapsible">Bonaparte Crossing the Rhine</button>
+  <div class="content">
+    <p class="fife">This song has a beautiful (in my opinion) 3-4 part harmony, which I put below.</p>
+    <audio controls>
+      <source src="https://vvfdc.org/Music/Audio/Bonaparte%20Crossing%20The%20Rhine.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Bonaparte Crossing the Rhine.png">
+    <img class="drum" src="drum_music_png/Bonaparte Crossing the Rhine.png">
+  </div>
+
+  <button type="button" class="collapsible">World Turned Upside Down</button>
+  <div class="content">
+    <p class="drum">Is there a bass drum part to this piece? I'd presume so, but I could not find it."</p>
+    <audio controls>
+      <source src="https://vvfdc.org/Music/Audio/World%20Turned%20Upside%20Down.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/World Turned Upside Down.png">
+    <img class="drum" src="drum_music_png/World Turned Upside Down.png">
+  </div>
+
+  <button type="button" class="collapsible">Three Little Drummers</button>
+  <div class="content">
+    <p>This song is <em>very</em> challenging on the fife (but a lot of fun in my opinion). Newer fifers would not be able to play this song, but if needed, I can try to cook up a harmony that is more accessible to our newer members.</p>
+    <audio controls>
+      <source src="https://vvfdc.org/Music/Audio/Three%20Little%20Drummers.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Three Little Drummers.png">
+    <img class="drum" src="drum_music_png/Three Little Drummers.png">
+  </div>
+
+  <button type="button" class="collapsible">Downfall of Paris</button>
+  <div class="content">
+    <p>This song would be pretty tough for the fife, especially for our newer fifers (not impossible though, I think). Also, this recording is not how the tune is usually played, especially for the C part. Trust the sheet music, not the recording.</p>
+    <audio controls>
+      <source src="recordings/Downfall of Paris.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Downfall of Paris.png">
+    <img class="drum" src="drum_music_png/Downfall of Paris.png">
+  </div>
+
+  <button type="button" class="collapsible">Trenton</button>
+  <div class="content">
+    <p>Sorry about the bad recording</p>
+    <audio controls>
+      <source src="recordings/Trenton.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Trenton.png">
+    <img class="drum" src="drum_music_png/Trenton.png">
+  </div>
+
+  <button type="button" class="collapsible">New Tatterjack Quickstep</button>
+  <div class="content">
+    <p class="fife">This recording is not exactly how I would recommend we play it (though it's still pretty close). The rhythm is usually a little different.</p>
+    <audio controls>
+      <source src="https://vvfdc.org/Music/Audio/Tatterjack.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/New Tatterjack Quickstep.png">
+    <img class="drum" src="drum_music_png/New Tatterjack Quickstep.png">
+  </div>
+
+  <button type="button" class="collapsible">Village Quickstep</button>
+  <div class="content">
+    <audio controls>
+      <source src="recordings/Village Quickstep.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Village Quickstep.png">
+    <img class="drum" src="drum_music_png/Village Quickstep.png">
+  </div>
+
+  <button type="button" class="collapsible">Green Cockade</button>
+  <div class="content">
+    <audio controls>
+      <source src="recordings/Green Cockade.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Green Cockade.png">
+    <img class="drum" src="drum_music_png/Green Cockade.png">
+  </div>
+
+  <button type="button" class="collapsible">Jaybird and Fireman's Quickstep</button>
+  <div class="content">
+    <p>This is technically two separate songs, but they are just about always played together as a medley.</p>
+    <audio controls>
+      <source src="https://vvfdc.org/Music/Audio/Jaybird%20&%20Fireman's.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Jaybird and Fireman's Quickstep.png">
+    <img class="drum" src="drum_music_png/Jaybird and Fireman's Quickstep.png">
+  </div>
+
+  <button type="button" class="collapsible">Harem Scarem</button>
+  <div class="content">
+    <audio controls>
+      <source src="https://vvfdc.org/Music/Audio/Harem%20Scarem.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Harem Scarem.png">
+    <img class="drum" src="drum_music_png/Harem Scarem.png">
+  </div>
+
+  <button type="button" class="collapsible">Black Pearl</button>
+  <div class="content">
+    <p>This song would be rather challenging for the newer fifers, but it's a lot of fun in my opinion.</p>
+    <audio controls>
+      <source src="https://vvfdc.org/Music/Audio/Black%20Pearl.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Black Pearl.png">
+    <img class="drum" src="drum_music_png/Black Pearl.png">
+  </div>
+
+  <button type="button" class="collapsible">Eel Pot Tavern</button>
+  <div class="content">
+    <p>MCV plays an amazing arrangement of Eel Pot Tavern. Unfortunately, since it's MCV, this arrangement is in some crazy key of H# or whatever. I put a transposed recording of their arrangement below. If we vote for it, I could, with a little effort, procure a copy of their sheet music. The sheet music below is a different arrangement, but the fife melody line is almost the same.</p>
+    <audio controls>
+      <source src="recordings/Eel Pot Tavern.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Eel Pot Tavern.png">
+    <img class="drum" src="drum_music_png/Eel Pot Tavern.png">
+  </div>
+
+  <button type="button" class="collapsible">Pig Town Fling</button>
+  <div class="content">
+    <p>This song would be a little tough on the newer fifers (not impossible, I think).</p>
+    <audio controls>
+      <source src="https://vvfdc.org/Music/Audio/Pig%20Town%20Fling.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Pig Town Fling.png">
+    <img class="drum" src="drum_music_png/Pig Town Fling.png">
+  </div>
+
+  <button type="button" class="collapsible">Drums and Guns</button>
+  <div class="content">
+    <p>This tune would also be tough on the newer fifers, but it can be made more accessible by omitting pedal tones. Also there is a harmony I can dig up that sounds good and is not as challenging.</p>
+    <audio controls>
+      <source src="https://vvfdc.org/Music/Audio/Drums%20&%20Guns.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Drums and Guns.png">
+    <img class="drum" src="drum_music_png/Drums and Guns.png">
+  </div>
+
+  <button type="button" class="collapsible">Billy Budd</button>
+  <div class="content">
+    <p>This song would be a little tough on the newer fifers. Also, sorry about the terrible quality of the recording.</p>
+    <audio controls>
+      <source src="recordings/Billy Budd.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Billy Budd.png">
+    <img class="drum" src="drum_music_png/Billy Budd.png">
+  </div>
+
+  <button type="button" class="collapsible">Hell on the Wabash</button>
+  <div class="content">
+    <p>This song is <em>very</em> challenging for the fife (but a lot of fun in my opinion). Newer fifers would not be able to play this song, but if needed, I might be able to cook up a harmony that is more accessible to our newer members.</p>
+    <audio controls>
+      <source src="recordings/Hell on the Wabash.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <img class="fife" src="fife_music_png/Hell on the Wabash.png">
+    <img class="drum" src="drum_music_png/Hell on the Wabash.png">
+  </div>
 </div>
-
-<button type="button" class="collapsible">Arkansas Traveler</button>
-<div class="content">
-  <audio controls>
-    <source src="https://vvfdc.org/Music/Audio/Arkansas%20Traveler.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Arkansas Traveler.png">
-</div>
-
-<button type="button" class="collapsible">Black Watch</button>
-<div class="content">
-  <p>Note: This tune was in Culloden Moor, so many/most WDJ members may be familiar with it.</p>
-  <audio controls>
-    <source src="https://vvfdc.org/Music/Audio/Black%20Watch.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Black Watch.png">
-</div>
-
-<button type="button" class="collapsible">Bonaparte Crossing the Rhine</button>
-<div class="content">
-  <p>Note: This song has a beautiful (in my opinion) 3-4 part harmony, which I put below.</p>
-  <audio controls>
-    <source src="https://vvfdc.org/Music/Audio/Bonaparte%20Crossing%20The%20Rhine.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Bonaparte Crossing the Rhine.png">
-</div>
-
-<button type="button" class="collapsible">World Turned Upside Down</button>
-<div class="content">
-  <audio controls>
-    <source src="https://vvfdc.org/Music/Audio/World%20Turned%20Upside%20Down.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/World Turned Upside Down.png">
-</div>
-
-<button type="button" class="collapsible">Three Little Drummers</button>
-<div class="content">
-  <p>Note: This song is <em>very</em> challenging (but a lot of fun in my opinion). Newer fifers would not be able to play this song, but if needed, I can try to cook up a harmony that is more accessible to our newer members.</p>
-  <audio controls>
-    <source src="https://vvfdc.org/Music/Audio/Three%20Little%20Drummers.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Three Little Drummers.png">
-</div>
-
-<button type="button" class="collapsible">Downfall of Paris</button>
-<div class="content">
-  <p>Note: This song would be pretty tough, especially for our newer fifers (not impossible though, I think). Also, this recording is not how the tune is usually played, especially for the C part. Trust the sheet music, not the recording.</p>
-  <audio controls>
-    <source src="recordings/Downfall of Paris.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Downfall of Paris.png">
-</div>
-
-<button type="button" class="collapsible">Trenton</button>
-<div class="content">
-  <p>Note: Sorry about the bad recording</p>
-  <audio controls>
-    <source src="recordings/Trenton.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Trenton.png">
-</div>
-
-<button type="button" class="collapsible">New Tatterjack Quickstep</button>
-<div class="content">
-  <p>Note: This recording is not exactly how I would recommend we play it (though it's still pretty close). The rhythm is usually a little different.</p>
-  <audio controls>
-    <source src="https://vvfdc.org/Music/Audio/Tatterjack.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/New Tatterjack Quickstep.png">
-</div>
-
-<button type="button" class="collapsible">Village Quickstep</button>
-<div class="content">
-  <audio controls>
-    <source src="recordings/Village Quickstep.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Village Quickstep.png">
-</div>
-
-<button type="button" class="collapsible">Green Cockade</button>
-<div class="content">
-  <audio controls>
-    <source src="recordings/Green Cockade.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Green Cockade.png">
-</div>
-
-<button type="button" class="collapsible">Jaybird and Fireman's Quickstep</button>
-<div class="content">
-  <p>Note: This is technically two separate songs, but they are just about always played together as a medley.</p>
-  <audio controls>
-    <source src="https://vvfdc.org/Music/Audio/Jaybird%20&%20Fireman's.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Jaybird and Fireman's Quickstep.png">
-</div>
-
-<button type="button" class="collapsible">Harem Scarem</button>
-<div class="content">
-  <audio controls>
-    <source src="https://vvfdc.org/Music/Audio/Harem%20Scarem.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Harem Scarem.png">
-</div>
-
-<button type="button" class="collapsible">Black Pearl</button>
-<div class="content">
-  <p>Note: This song would be rather challenging for the new fifers, but it's a lot of fun in my opinion.</p>
-  <audio controls>
-    <source src="https://vvfdc.org/Music/Audio/Black%20Pearl.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Black Pearl.png">
-</div>
-
-<button type="button" class="collapsible">Eel Pot Tavern</button>
-<div class="content">
-  <p>Note: MCV plays an amazing arrangement of Eel Pot Tavern. Unfortunately, since it's MCV, this arrangement is in some crazy key of H# or whatever. I put a transposed recording of their arrangement below. If we vote for it, I could, with a little effort, procure a copy of their sheet music. The sheet music below is a different arrangement, but the melody line is almost the same.</p>
-  <audio controls>
-    <source src="recordings/Eel Pot Tavern.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Eel Pot Tavern.png">
-</div>
-
-<button type="button" class="collapsible">Pig Town Fling</button>
-<div class="content">
-  <p>Note: This song would be tough on the new fifers.</p>
-  <audio controls>
-    <source src="https://vvfdc.org/Music/Audio/Pig%20Town%20Fling.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Pig Town Fling.png">
-</div>
-
-<button type="button" class="collapsible">Drums and Guns</button>
-<div class="content">
-  <p>This tune would also be tough on the newer fifers, but it can be made more accessible by omitting pedal tones. Also there is a harmony I can dig up that sounds good and is not as challenging.</p>
-  <audio controls>
-    <source src="https://vvfdc.org/Music/Audio/Drums%20&%20Guns.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Drums and Guns.png">
-</div>
-
-<button type="button" class="collapsible">Billy Budd</button>
-<div class="content">
-  <p>Note: This song would be a little tough on the new fifers. Also, sorry about the terrible quality of the recording.</p>
-  <audio controls>
-    <source src="recordings/Billy Budd.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Billy Budd.png">
-</div>
-
-<button type="button" class="collapsible">Hell on the Wabash</button>
-<div class="content">
-  <p>Note: This song is <em>very</em> challenging (but a lot of fun in my opinion). Newer fifers would not be able to play this song, but if needed, I might be able to cook up a harmony that is more accessible to our newer members.</p>
-  <audio controls>
-    <source src="recordings/Hell on the Wabash.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  <img src="fife_music_png/Hell on the Wabash.png">
-</div>
-
 <script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
+var coll = Array.from(document.getElementsByClassName("collapsible"));
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+coll.forEach(function(c) {
+  c.addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
@@ -243,7 +343,41 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
+});
+
+var instrument_toggle = document.getElementsByName("instrument_toggle")[0];
+var fife_components = Array.from(document.getElementsByClassName("fife"));
+var drum_components = Array.from(document.getElementsByClassName("drum"));
+
+coll.forEach(function(c) {
+  c.onmouseenter = function() {
+    console.log(this);
+    this.style.backgroundColor = instrument_toggle.checked ? "#556" : "#565";
+  };
+  c.onmouseleave = function() {
+    this.style.backgroundColor = instrument_toggle.checked ? "#778" : "#787";
+  };
+});
+
+var update_shown_pages = function() {
+  document.body.style.backgroundColor = instrument_toggle.checked ? "#ccf" : "#cfc";
+  var act_color = instrument_toggle.checked ? "#556" : "#565";
+  var nonact_color = instrument_toggle.checked ? "#778" : "#787";
+  fife_components.forEach(function(c) {
+    c.style.display = instrument_toggle.checked ? "none" : "block"
+  });
+  drum_components.forEach(function(c) {
+    c.style.display = instrument_toggle.checked ? "block" : "none"
+  })
+  coll.forEach(function(c) {
+    c.style.backgroundColor = nonact_color;
+  });
 }
+
+update_shown_pages();
+
+instrument_toggle.addEventListener("click", update_shown_pages);
+
 </script>
 
 </body>
