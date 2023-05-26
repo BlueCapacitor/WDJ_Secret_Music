@@ -17,6 +17,30 @@
     width: 100%;
   }
 
+  .float-left {
+    float: left;
+  }
+
+  .float-right {
+    float: right;
+  }
+
+  .stop-float {
+    float: none;
+    clear: both;
+  }
+
+  .left-right-grid {
+    display: grid;
+    grid-template-columns: auto 70px;
+    align-content: space-between;
+  }
+
+  .stick-to-right {
+    position: absolute;
+    right: 10px;
+  }
+
 /*  Collapsible*/
 
   .collapsible {
@@ -36,7 +60,7 @@
   }
 
   .content {
-    padding: 0 18px;
+    padding: 0 17px;
     display: none;
     overflow: hidden;
     background-color: #fff;
@@ -45,10 +69,10 @@
 /*  Slider*/
 
 .switch {
-  position: relative;
-  display: inline-block;
+/*  position: relative;*/
   width: 60px;
   height: 34px;
+  top: 25px;
 }
 
 .switch input { 
@@ -116,14 +140,18 @@ input:checked + .slider:before {
 </head>
 <body>
 
-  <label class="switch">
-    <input type="checkbox" name="instrument_toggle">
-    <span class="slider round"></span>
-  </label>
+  <div class="left-right-grid">
 
-  <h2>WDJ Secret Music Project - Preliminary Proposals</h2>
+    <h2>WDJ Secret Music Project - Preliminary Proposals</h2>
 
-  <p class="drum">Note for drummers: I found multiple versions for a couple of the drum parts. I put them all in, since you would know which version you play / which version is the best much better than I would.</p>
+    <label class="switch stick-to-right">
+      <input type="checkbox" name="instrument_toggle">
+      <span class="slider round"></span>
+    </label>
+
+  </div>
+
+  <p class="drum stop-float">Note for drummers: I found multiple versions for a couple of the drum parts. I put them all in, since you would know which version you play / which version is the best much better than I would.</p>
 
   <button type="button" class="collapsible">Crown Point</button>
   <div class="content">
