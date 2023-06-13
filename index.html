@@ -15,11 +15,7 @@
 
         audio {
             width: 100%;
-        }
-
-        .stop-float {
-            float: none;
-            clear: both;
+            padding: 10px 10px 0 0;
         }
 
         .title-grid {
@@ -49,7 +45,7 @@
         }
 
         .content {
-            padding: 0 17px;
+            padding: 0 10px;
             display: none;
             overflow: hidden;
             background-color: #fff;
@@ -118,6 +114,27 @@
             border-radius: 50%;
         }
 
+        /* Download button */
+
+        .image-container {
+            position: relative;
+        }
+
+        .hover-tr {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .download {
+            background-color: #787;
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            text-align: center;
+            border: 0;
+            transition: background-color 0.3s ease;
+        }
 
     </style>
     <title>WDJ Secret Music Project</title>
@@ -135,9 +152,6 @@
 
 </div>
 
-<p class="drum stop-float">Note for drummers: I found multiple versions for a couple of the drum parts. I put them all
-    in, since you would know which version you play / which version is the best much better than I would.</p>
-
 <h3>Elected tunes</h3>
 
 <button type="button" class="collapsible">Drums and Guns</button>
@@ -146,8 +160,14 @@
         <source src="https://vvfdc.org/Music/Audio/Drums%20&%20Guns.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Drums and Guns.png" alt="Drums and Guns">
-    <img class="drum" src="drum_music_png/Drums and Guns.png" alt="Drums and Guns">
+    <div class="image-container fife">
+        <img src="fife_music_png/Drums and Guns.png" alt="Drums and Guns">
+        <a class="hover-tr" href="fife_music_pdf/Drums and Guns.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Drums and Guns.png" alt="Drums and Guns">
+        <a class="hover-tr" href="drum_music_pdf/Drums and Guns.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Black Watch</button>
@@ -156,9 +176,17 @@
         <source src="https://vvfdc.org/Music/Audio/Black%20Watch.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Black Watch.png" alt="Black Watch">
-    <img class="drum" src="drum_music_png/Black Watch-1.png" alt="Black Watch-1">
-    <img class="drum" src="drum_music_png/Black Watch-2.png" alt="Black Watch-2">
+    <div class="image-container fife">
+        <img src="fife_music_png/Black Watch.png" alt="Black Watch">
+        <a class="hover-tr" href="fife_music_pdf/Black Watch.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Black Watch-1.png" alt="Black Watch-1">
+        <a class="hover-tr" href="drum_music_pdf/Black Watch.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Black Watch-2.png" alt="Black Watch-2">
+    </div>
 </div>
 
 <button type="button" class="collapsible">Black Pearl</button>
@@ -167,8 +195,14 @@
         <source src="https://vvfdc.org/Music/Audio/Black%20Pearl.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Black Pearl.png" alt="Black Pearl">
-    <img class="drum" src="drum_music_png/Black Pearl.png" alt="Black Pearl">
+    <div class="image-container fife">
+        <img src="fife_music_png/Black Pearl.png" alt="Black Pearl">
+        <a class="hover-tr" href="fife_music_pdf/Black Pearl.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Black Pearl.png" alt="Black Pearl">
+        <a class="hover-tr" href="drum_music_pdf/Black Pearl.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Hell on the Wabash</button>
@@ -177,8 +211,14 @@
         <source src="recordings/Hell on the Wabash.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Hell on the Wabash.png" alt="Hell on the Wabash">
-    <img class="drum" src="drum_music_png/Hell on the Wabash.png" alt="Hell on the Wabash">
+    <div class="image-container fife">
+        <img src="fife_music_png/Hell on the Wabash.png" alt="Hell on the Wabash">
+        <a class="hover-tr" href="fife_music_pdf/Hell on the Wabash.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Hell on the Wabash.png" alt="Hell on the Wabash">
+        <a class="hover-tr" href="drum_music_pdf/Hell on the Wabash.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Village Quickstep</button>
@@ -187,8 +227,14 @@
         <source src="recordings/Village Quickstep.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Village Quickstep.png" alt="Village Quickstep">
-    <img class="drum" src="drum_music_png/Village Quickstep.png" alt="Village Quickstep">
+    <div class="image-container fife">
+        <img src="fife_music_png/Village Quickstep.png" alt="Village Quickstep">
+        <a class="hover-tr" href="fife_music_pdf/Village Quickstep.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Village Quickstep.png" alt="Village Quickstep">
+        <a class="hover-tr" href="drum_music_pdf/Village Quickstep.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <h3>Other tunes</h3>
@@ -199,8 +245,14 @@
         <source src="https://vvfdc.org/Music/Audio/Crown%20Point.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Crown Point.png" alt="Crown Point">
-    <img class="drum" src="drum_music_png/Crown Point.png" alt="Crown Point">
+    <div class="image-container fife">
+        <img src="fife_music_png/Crown Point.png" alt="Crown Point">
+        <a class="hover-tr" href="fife_music_pdf/Crown Point.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Crown Point.png" alt="Crown Point">
+        <a class="hover-tr" href="drum_music_pdf/Crown Point.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Arkansas Traveler</button>
@@ -209,8 +261,14 @@
         <source src="https://vvfdc.org/Music/Audio/Arkansas%20Traveler.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Arkansas Traveler.png" alt="Arkansas Traveler">
-    <img class="drum" src="drum_music_png/Arkansas Traveler.png" alt="Arkansas Traveler">
+    <div class="image-container fife">
+        <img src="fife_music_png/Arkansas Traveler.png" alt="Arkansas Traveler">
+        <a class="hover-tr" href="fife_music_pdf/Arkansas Traveler.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Arkansas Traveler.png" alt="Arkansas Traveler">
+        <a class="hover-tr" href="drum_music_pdf/Arkansas Traveler.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Bonaparte Crossing the Rhine</button>
@@ -219,8 +277,14 @@
         <source src="https://vvfdc.org/Music/Audio/Bonaparte%20Crossing%20The%20Rhine.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Bonaparte Crossing the Rhine.png" alt="Bonaparte Crossing the Rhine">
-    <img class="drum" src="drum_music_png/Bonaparte Crossing the Rhine.png" alt="Bonaparte Crossing the Rhine">
+    <div class="image-container fife">
+        <img src="fife_music_png/Bonaparte Crossing the Rhine.png" alt="Bonaparte Crossing the Rhine">
+        <a class="hover-tr" href="fife_music_pdf/Bonaparte Crossing the Rhine.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Bonaparte Crossing the Rhine.png" alt="Bonaparte Crossing the Rhine">
+        <a class="hover-tr" href="drum_music_pdf/Bonaparte Crossing the Rhine.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">World Turned Upside Down</button>
@@ -230,8 +294,14 @@
         <source src="https://vvfdc.org/Music/Audio/World%20Turned%20Upside%20Down.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/World Turned Upside Down.png" alt="World Turned Upside Down">
-    <img class="drum" src="drum_music_png/World Turned Upside Down.png" alt="World Turned Upside Down">
+    <div class="image-container fife">
+        <img src="fife_music_png/World Turned Upside Down.png" alt="World Turned Upside Down">
+        <a class="hover-tr" href="fife_music_pdf/World Turned Upside Down.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/World Turned Upside Down.png" alt="World Turned Upside Down">
+        <a class="hover-tr" href="drum_music_pdf/World Turned Upside Down.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Three Little Drummers</button>
@@ -240,8 +310,14 @@
         <source src="https://vvfdc.org/Music/Audio/Three%20Little%20Drummers.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Three Little Drummers.png" alt="Three Little Drummers">
-    <img class="drum" src="drum_music_png/Three Little Drummers.png" alt="Three Little Drummers">
+    <div class="image-container fife">
+        <img src="fife_music_png/Three Little Drummers.png" alt="Three Little Drummers">
+        <a class="hover-tr" href="fife_music_pdf/Three Little Drummers.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Three Little Drummers.png" alt="Three Little Drummers">
+        <a class="hover-tr" href="drum_music_pdf/Three Little Drummers.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Downfall of Paris</button>
@@ -250,8 +326,14 @@
         <source src="recordings/Downfall of Paris.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Downfall of Paris.png" alt="Downfall of Paris">
-    <img class="drum" src="drum_music_png/Downfall of Paris.png" alt="Downfall of Paris">
+    <div class="image-container fife">
+        <img src="fife_music_png/Downfall of Paris.png" alt="Downfall of Paris">
+        <a class="hover-tr" href="fife_music_pdf/Downfall of Paris.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Downfall of Paris.png" alt="Downfall of Paris">
+        <a class="hover-tr" href="drum_music_pdf/Downfall of Paris.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Trenton</button>
@@ -261,8 +343,14 @@
         <source src="recordings/Trenton.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Trenton.png" alt="Trenton">
-    <img class="drum" src="drum_music_png/Trenton.png" alt="Trenton">
+    <div class="image-container fife">
+        <img src="fife_music_png/Trenton.png" alt="Trenton">
+        <a class="hover-tr" href="fife_music_pdf/Trenton.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Trenton.png" alt="Trenton">
+        <a class="hover-tr" href="drum_music_pdf/Trenton.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">New Tatterjack Quickstep</button>
@@ -271,8 +359,14 @@
         <source src="https://vvfdc.org/Music/Audio/Tatterjack.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/New Tatterjack Quickstep.png" alt="New Tatterjack Quickstep">
-    <img class="drum" src="drum_music_png/New Tatterjack Quickstep.png" alt="New Tatterjack Quickstep">
+    <div class="image-container fife">
+        <img src="fife_music_png/New Tatterjack Quickstep.png" alt="New Tatterjack Quickstep">
+        <a class="hover-tr" href="fife_music_pdf/New Tatterjack Quickstep.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/New Tatterjack Quickstep.png" alt="New Tatterjack Quickstep">
+        <a class="hover-tr" href="drum_music_pdf/New Tatterjack Quickstep.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Green Cockade</button>
@@ -281,8 +375,14 @@
         <source src="recordings/Green Cockade.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Green Cockade.png" alt="Green Cockade">
-    <img class="drum" src="drum_music_png/Green Cockade.png" alt="Green Cockade">
+    <div class="image-container fife">
+        <img src="fife_music_png/Green Cockade.png" alt="Green Cockade">
+        <a class="hover-tr" href="fife_music_pdf/Green Cockade.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Green Cockade.png" alt="Green Cockade">
+        <a class="hover-tr" href="drum_music_pdf/Green Cockade.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Jaybird and Fireman's Quickstep</button>
@@ -292,8 +392,14 @@
         <source src="https://vvfdc.org/Music/Audio/Jaybird%20&%20Fireman's.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Jaybird and Fireman's Quickstep.png" alt="Jaybird and Fireman's Quickstep">
-    <img class="drum" src="drum_music_png/Jaybird and Fireman's Quickstep.png" alt="Jaybird and Fireman's Quickstep">
+    <div class="image-container fife">
+        <img src="fife_music_png/Jaybird and Fireman's Quickstep.png" alt="Jaybird and Fireman's Quickstep">
+        <a class="hover-tr" href="fife_music_pdf/Jaybird and Fireman's Quickstep.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Jaybird and Fireman's Quickstep.png" alt="Jaybird and Fireman's Quickstep">
+        <a class="hover-tr" href="drum_music_pdf/Jaybird and Fireman's Quickstep.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Harem Scarem</button>
@@ -302,8 +408,14 @@
         <source src="https://vvfdc.org/Music/Audio/Harem%20Scarem.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Harem Scarem.png" alt="Harem Scarem">
-    <img class="drum" src="drum_music_png/Harem Scarem.png" alt="Harem Scarem">
+    <div class="image-container fife">
+        <img src="fife_music_png/Harem Scarem.png" alt="Harem Scarem">
+        <a class="hover-tr" href="fife_music_pdf/Harem Scarem.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Harem Scarem.png" alt="Harem Scarem">
+        <a class="hover-tr" href="drum_music_pdf/Harem Scarem.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Eel Pot Tavern</button>
@@ -314,8 +426,14 @@
         <source src="recordings/Eel Pot Tavern.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Eel Pot Tavern.png" alt="Eel Pot Tavern">
-    <img class="drum" src="drum_music_png/Eel Pot Tavern.png" alt="Eel Pot Tavern">
+    <div class="image-container fife">
+        <img src="fife_music_png/Eel Pot Tavern.png" alt="Eel Pot Tavern">
+        <a class="hover-tr" href="fife_music_pdf/Eel Pot Tavern.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Eel Pot Tavern.png" alt="Eel Pot Tavern">
+        <a class="hover-tr" href="drum_music_pdf/Eel Pot Tavern.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Pig Town Fling</button>
@@ -324,8 +442,14 @@
         <source src="https://vvfdc.org/Music/Audio/Pig%20Town%20Fling.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Pig Town Fling.png" alt="Pig Town Fling">
-    <img class="drum" src="drum_music_png/Pig Town Fling.png" alt="Pig Town Fling">
+    <div class="image-container fife">
+        <img src="fife_music_png/Pig Town Fling.png" alt="Pig Town Fling">
+        <a class="hover-tr" href="fife_music_pdf/Pig Town Fling.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Pig Town Fling.png" alt="Pig Town Fling">
+        <a class="hover-tr" href="drum_music_pdf/Pig Town Fling.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <button type="button" class="collapsible">Billy Budd</button>
@@ -335,12 +459,19 @@
         <source src="recordings/Billy Budd.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <img class="fife" src="fife_music_png/Billy Budd.png" alt="Billy Budd">
-    <img class="drum" src="drum_music_png/Billy Budd.png" alt="Billy Budd">
+    <div class="image-container fife">
+        <img src="fife_music_png/Billy Budd.png" alt="Billy Budd">
+        <a class="hover-tr" href="fife_music_pdf/Billy Budd.pdf" download><button class="download">&darr;</button></a>
+    </div>
+    <div class="image-container drum">
+        <img src="drum_music_png/Billy Budd.png" alt="Billy Budd">
+        <a class="hover-tr" href="drum_music_pdf/Billy Budd.pdf" download><button class="download">&darr;</button></a>
+    </div>
 </div>
 
 <script>
     const coll = Array.from(document.getElementsByClassName("collapsible"));
+    const down = Array.from(document.getElementsByClassName("download"));
 
     coll.forEach(function (c) {
         c.addEventListener("click", function () {
@@ -358,15 +489,16 @@
     const fife_components = Array.from(document.getElementsByClassName("fife"));
     const drum_components = Array.from(document.getElementsByClassName("drum"));
 
-    coll.forEach(function (c) {
+    const colorBind = function (c) {
         c.onmouseenter = function () {
-            console.log(this);
             this.style.backgroundColor = instrument_toggle.checked ? "#556" : "#565";
         };
         c.onmouseleave = function () {
             this.style.backgroundColor = instrument_toggle.checked ? "#778" : "#787";
         };
-    });
+    }
+    coll.forEach(colorBind);
+    down.forEach(colorBind);
 
     const update_shown_pages = function () {
         document.body.style.backgroundColor = instrument_toggle.checked ? "#ccf" : "#cfc";
@@ -378,9 +510,11 @@
         drum_components.forEach(function (c) {
             c.style.display = instrument_toggle.checked ? "block" : "none"
         })
-        coll.forEach(function (c) {
+        const resetColorBind = function (c) {
             c.style.backgroundColor = nonact_color;
-        });
+        }
+        coll.forEach(resetColorBind);
+        down.forEach(resetColorBind);
     };
 
     update_shown_pages();
