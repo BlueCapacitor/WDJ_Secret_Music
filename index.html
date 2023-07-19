@@ -136,6 +136,16 @@
             transition: background-color 0.3s ease;
         }
 
+        .big-download {
+            background-color: #787;
+            color: #FFF;
+            height: 25px;
+            border-radius: 5px;
+            text-align: center;
+            border: 0;
+            transition: background-color 0.3s ease;
+        }
+
     </style>
     <title>WDJ Secret Music Project</title>
 </head>
@@ -151,6 +161,9 @@
     </label>
 
 </div>
+
+<a class = "fife" href="auto_gen/fife_music.zip" download><button class="big-download">Download all</button></a>
+<a class = "drum" href="auto_gen/drum_music.zip" download><button class="big-download">Download all</button></a>
 
 <h3>Elected tunes</h3>
 
@@ -471,7 +484,8 @@
 
 <script>
     const coll = Array.from(document.getElementsByClassName("collapsible"));
-    const down = Array.from(document.getElementsByClassName("download"));
+    const down = Array.from(document.getElementsByClassName("download"))
+        .concat(Array.from(document.getElementsByClassName("big-download")));
 
     coll.forEach(function (c) {
         c.addEventListener("click", function () {
